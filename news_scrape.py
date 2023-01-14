@@ -43,7 +43,7 @@ def summarize_article(url):
 
     return article.summary
 
-summarize_article('https://nos.nl/artikel/2459417-australische-kardinaal-pell-wiens-naam-verbonden-bleef-aan-misbruikschandaal-overleden')
+
 
 
 

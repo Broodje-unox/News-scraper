@@ -27,10 +27,10 @@ def find_sentiment(news_story):
 
     # Displays the sentiment that relates to the averages on the console.
     print()
-    print("FINAL ANALYSIS")
+    print("LAATSTE ANALYSE")
     print("-------------------------------------")
-    print("Polarity: " + calculate_sentiment(polarity_average, "polarity"))
-    print("Subjectivity: " + calculate_sentiment(subjectivity_average, "subjectivity"))
+    print("Sentiment: " + calculate_sentiment(polarity_average, "polarity"))
+    print("Subjectiviteit: " + calculate_sentiment(subjectivity_average, "subjectivity"))
 
 
 # Helper Methods (for the find_sentiment method)
@@ -47,33 +47,33 @@ def calculate_sentiment(sentiment, type):
     sentiment_category = ""
     if type == "polarity":
         if sentiment > 0.75:
-            sentiment_category = "Extremely positive."
+            sentiment_category = "Zeer positief."
         elif sentiment > 0.5:
-            sentiment_category = "Significantly positive."
+            sentiment_category = "Behoorlijk positief."
         elif sentiment > 0.3:
-            sentiment_category = "Fairly positive."
+            sentiment_category = "Redelijk positief."
         elif sentiment > 0.1:
-            sentiment_category = "Slightly positive."
+            sentiment_category = "Een beetje positief."
         elif sentiment < -0.1:
-            sentiment_category = "Slightly negative."
+            sentiment_category = "Een beetje Negatief."
         elif sentiment < -0.3:
-            sentiment_category = "Fairly negative."
+            sentiment_category = "Redelijk Negatief."
         elif sentiment < -0.5:
-            sentiment_category = "Significantly negative."
+            sentiment_category = "Behoorlijk Negatief."
         elif sentiment < -0.75:
-            sentiment_category = "Extremely negative."
+            sentiment_category = "Zeer Negatief."
         else:
-            sentiment_category = "Neutral."
+            sentiment_category = "Neutraal."
         return sentiment_category
     elif type == "subjectivity":
         if sentiment > 0.75:
-            sentiment_category = "Extremely subjective."
+            sentiment_category = "Zeer subjectief."
         elif sentiment > 0.5:
-            sentiment_category = "Fairly subjective."
+            sentiment_category = "Redelijk subjectief."
         elif sentiment > 0.3:
-            sentiment_category = "Fairly objective."
+            sentiment_category = "Redelijk objectief."
         elif sentiment > 0.1:
-            sentiment_category = "Extremely objective."
+            sentiment_category = "Zeer objectief."
         return sentiment_category
     else:
-        print("Invalid Input.")
+        print("Ongeldige Input.")
